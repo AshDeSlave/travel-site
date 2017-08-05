@@ -1,12 +1,15 @@
-$mainBlue: #2f5572;
-
 .test {
 	margin: 10px;
 	padding: 10px;
-	color: $mainBlue;
-	-webkit-box-shadow: 10px;
+	color: #2f5572; 
+	-webkit-box-shadow: 10px; 
 	        box-shadow: 10px;
-	border-radius: 10px;
-	-webkit-columns: 300px 2;
+	border-radius: 10px; 
+	-webkit-columns: 300px 2; 
 	        columns: 300px 2;
 }  
+
+.box a {
+		display: block;
+		padding: 10px;
+	}

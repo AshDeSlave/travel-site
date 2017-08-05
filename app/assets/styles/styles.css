@@ -3,8 +3,15 @@ $mainBlue: #2f5572;
 .test {
 	margin: 10px;
 	padding: 10px;
-	color: $mainBlue;
+	color: $mainBlue; 
 	box-shadow: 10px;
-	border-radius: 10px;
+	border-radius: 10px; 
 	columns: 300px 2;
 }  
+
+.box {
+	a {
+		display: block;
+		padding: 10px;
+	}
+}
