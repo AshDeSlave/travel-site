@@ -5,7 +5,10 @@ var gulp = require('gulp'),
 	postcss = require('gulp-postcss'),
 	autoprefixer = require('autoprefixer'),
 	cssvars = require('postcss-simple-vars'),
-	nested = require('postcss-nested');
+	nested = require('postcss-nested')
+	cssImport = require('postcss-import'),
+	sass = require('gulp-sass'),
+	notify = require('gulp-notify');
 
 //  gulp.task('task to be named', 'what we want to happen when task runs')
 gulp.task('default', function() {
@@ -18,7 +21,8 @@ gulp.task('html', function() {
 gulp.task('styles', function() {
 	return	gulp.src('./app/assets/styles/styles.css')
 		// postcss() expects an array
-		.pipe(postcss([cssvars, nested, autoprefixer]))
+		//.pipe(sass().on('error', sass.logError)) // not working, errors cssImport
+		.pipe(postcss([cssImport, cssvars, nested, autoprefixer]))
 		.pipe(gulp.dest('./app/temp/styles'));
 });
 // Utilizing the gulp-watch plugin
